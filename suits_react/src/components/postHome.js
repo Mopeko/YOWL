@@ -4,7 +4,6 @@ function Post() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    // Fonction pour récupérer les posts depuis Strapi
     const fetchPosts = async () => {
       try {
         const response = await fetch("http://localhost:1337/api/posts");
@@ -15,9 +14,8 @@ function Post() {
       }
     };
 
-    // Appel de la fonction pour récupérer les posts au chargement du composant
     fetchPosts();
-  }, []); // Le tableau vide en tant que dépendance assure que l'effet ne se déclenchera qu'une fois au montage du composant
+  }, []); 
 
   return (
     <div>
