@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <div>
       {/* Contenu de votre application */}
-      <Test />
       <NavBar />
     </div>
   );

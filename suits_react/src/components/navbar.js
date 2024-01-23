@@ -5,6 +5,26 @@ import { Link } from 'react-router-dom';
 
 function useBarNav() {
   const [windowDimension, setWindowDimension] = useState(null);
+  const [homeLogoColor, setHomeLogoColor] = useState("#808080");
+  const [plusLogoColor, setPlusLogoColor] = useState("#808080");
+  const [searchLogoColor, setSearchLogoColor] = useState("#808080");
+  const [profileLogoColor, setProfileLogoColor] = useState("#808080");
+  
+  const handleHomeLogoClick = () => {
+    setHomeLogoColor("#ffffff");
+  };
+  
+  const handlePlusLogoClick = () => {
+    setPlusLogoColor("#ffffff");
+  };
+  
+  const handleSearchLogoClick = () => {
+    setSearchLogoColor("#ffffff");
+  };
+
+  const handleProfileLogoClick = () => {
+    setProfileLogoColor("#ffffff");
+  };
 
   useEffect(() => {
     setWindowDimension(window.innerWidth);
@@ -20,7 +40,6 @@ function useBarNav() {
   }, []);
 
   const isMobile = windowDimension <= 640;
-  const iconColor = "#ffffff";
 
   return (
     <Styles.Wrapper>
@@ -29,34 +48,34 @@ function useBarNav() {
       {isMobile ? (
         <MobileNavbar.Wrapper>
           <MobileNavbar.Items>
-            <MobileNavbar.Item style={{ color: iconColor }}>
+            <MobileNavbar.Item>
             <Link to="/">
               <MobileNavbar.Icon>
-                <Home color={iconColor} size={16} />
+                <Home onClick={handleHomeLogoClick} color={homeLogoColor} size={16} />
               </MobileNavbar.Icon>
             
             </Link>
             </MobileNavbar.Item>
-            <MobileNavbar.Item style={{ color: iconColor }}>
+            <MobileNavbar.Item>
             <Link to="/post">
               <MobileNavbar.Icon>
-                <PlusCircle color={iconColor} size={16} />
+                <PlusCircle onClick={handlePlusLogoClick} color={plusLogoColor} size={16} />
               </MobileNavbar.Icon>
               
             </Link>
             </MobileNavbar.Item>
-            <MobileNavbar.Item style={{ color: iconColor }}>
+            <MobileNavbar.Item>
             <Link to="/search">
               <MobileNavbar.Icon>
-                <Search color={iconColor} size={16} />
+                <Search onClick={handleSearchLogoClick} color={searchLogoColor} size={16} />
               </MobileNavbar.Icon>
               
             </Link>
             </MobileNavbar.Item>
-            <MobileNavbar.Item style={{ color: iconColor }}>
+            <MobileNavbar.Item>
             <Link to="/profil">
               <MobileNavbar.Icon>
-                <User color={iconColor} size={16} />
+                <User onClick={handleProfileLogoClick} color={profileLogoColor} size={16} />
               </MobileNavbar.Icon>
               
             </Link>
