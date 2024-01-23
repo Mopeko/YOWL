@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Home, PlusCircle, Search, User } from "react-feather";
 import { Link } from 'react-router-dom';
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald&family=Poppins:wght@200;500;700&family=Roboto:wght@300;700&display=swap');
+</style>
 
 function useBarNav() {
   const [windowDimension, setWindowDimension] = useState(null);
