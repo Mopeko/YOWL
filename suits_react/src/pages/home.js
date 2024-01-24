@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <div>
       {/* Contenu de votre application */}
-      <PostHome />
       <TopBar />
+      <PostHome />
       <NavBar />
     </div>
   );
