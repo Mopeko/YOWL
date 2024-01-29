@@ -1,5 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald&family=Poppins:wght@200;500;700;900&family=Roboto:wght@300;700&display=swap');
 </style>

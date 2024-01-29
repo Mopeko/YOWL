@@ -56,16 +56,8 @@ function useBarNav() {
               <MobileNavbar.Icon>
                 <Home onClick={handleHomeLogoClick} color={homeLogoColor} size={16} />
               </MobileNavbar.Icon>
-            
-            </Link>
-            </MobileNavbar.Item>
-            <MobileNavbar.Item>
-            <Link to="/post">
-              <MobileNavbar.Icon>
-                <PlusCircle onClick={handlePlusLogoClick} color={plusLogoColor} size={16} />
-              </MobileNavbar.Icon>
-              
-            </Link>
+
+              </Link>
             </MobileNavbar.Item>
             <MobileNavbar.Item>
             <Link to="/search">
@@ -74,6 +66,13 @@ function useBarNav() {
               </MobileNavbar.Icon>
               
             </Link>
+            </MobileNavbar.Item>
+            <MobileNavbar.Item>
+            <Link to="/post">
+              <MobileNavbar.Icon>
+                <PlusCircle onClick={handlePlusLogoClick} color={plusLogoColor} size={16} />
+              </MobileNavbar.Icon>
+              </Link>
             </MobileNavbar.Item>
             <MobileNavbar.Item>
             <Link to="/profil">
@@ -140,7 +139,7 @@ const MobileNavbar = {
     position: fixed;
     width: 100vw;
     bottom: 0;
-
+    
     justify-content: center;
   `,
   Items: styled(Navbar.Items)`
