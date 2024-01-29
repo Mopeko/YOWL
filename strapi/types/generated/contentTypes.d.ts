@@ -368,6 +368,7 @@ export interface ApiPostPost extends Schema.CollectionType {
     singularName: 'post';
     pluralName: 'posts';
     displayName: 'Post';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -375,7 +376,17 @@ export interface ApiPostPost extends Schema.CollectionType {
   attributes: {
     description: Attribute.Text;
     link: Attribute.String;
-    image: Attribute.String;
+    image: Attribute.Media;
+    users_permissions_user: Attribute.Relation<
+      'api::post.post',
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
+    user: Attribute.Relation<
+      'api::post.post',
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -746,7 +757,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -774,6 +784,18 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'plugin::users-permissions.user',
       'manyToOne',
       'plugin::users-permissions.role'
+    >;
+    avatar_url: Attribute.String;
+    website_url: Attribute.String;
+    twitter_username: Attribute.String;
+    linkedin_username: Attribute.String;
+    github_username: Attribute.String;
+    profile_slug: Attribute.UID<'plugin::users-permissions.user', 'username'>;
+    about: Attribute.RichText;
+    posts: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::post.post'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

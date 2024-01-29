@@ -139,7 +139,7 @@ const MobileNavbar = {
     position: fixed;
     width: 100vw;
     bottom: 0;
-
+    
     justify-content: center;
   `,
   Items: styled(Navbar.Items)`

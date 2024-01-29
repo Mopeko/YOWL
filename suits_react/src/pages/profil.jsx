@@ -1,13 +1,15 @@
 import React from 'react';
 import NavBar from '../components/navbar';
+import ProfilPage from '../components/profilPage';
 
-const Search = () => {
+
+const Profil = () => {
   return (
     <div>
-      {/* Contenu de votre application */}
+      <ProfilPage Id={1}/>
       <NavBar />
     </div>
   );
 };
 
-export default Search;
+export default Profil;
