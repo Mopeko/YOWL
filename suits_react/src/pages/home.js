@@ -3,6 +3,7 @@ import NavBar from '../components/navbar';
 import TopBar from '../components/topbar';
 import PostHome from '../components/postHome';
 
+
 const Home = () => {
   return (
     <div>

@@ -1,0 +1,25 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; /* Couleur de fond */
+    padding: 20px; /* Espace intérieur */
+    border: 1px solid #ccc; /* Bordure optionnelle */
+    max-width: 80%; /* Largeur maximale de la popup */
+    max-height: 80vh; /* Hauteur maximale de la popup (80% de la hauteur de la vue) */
+    overflow-y: auto; /* Activation de la barre de défilement si la popup dépasse la hauteur maximale */
+  }
+  .popup-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement */
+  }
+  
+  label {
+    margin-bottom: 10px; /* Ajouter un espace entre le texte et la case à cocher */
+  }
+  
+  input {
+    margin-left: 5px; /* Ajouter un espacement entre le texte et la case à cocher */
+  }
